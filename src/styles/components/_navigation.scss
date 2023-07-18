@@ -1,0 +1,35 @@
+.navigation {
+  padding: 23px 0 14px;
+  font-size: 14px;
+  line-height: 14px;
+
+  &__list {
+    display: flex;
+    list-style-type: "/";
+  }
+
+  &__item {
+    padding-right: 10.5px;
+    color: $colorDustyGray;
+  }
+
+  &__item:not(:first-child) {
+    padding-left: 4px;
+  }
+
+  &__item:first-child::marker {
+    content: "";
+  }
+
+  &__item:last-child {
+    color: $colorPurpleHeart;
+  }
+
+  &__item:last-child::marker {
+    color: $colorDustyGray;
+  }
+
+  &__link {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,75 @@
+.button-prev {
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+  color: $colorMediumPurple;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  outline-offset: -2px;
+  outline: 2px solid $colorMediumPurple;
+  transition: all 0.3s ease-in-out;
+
+  &:hover:enabled {
+  background-color: $colorMediumPurple;
+  color: $colorWhite;
+}
+
+&:focus-visible {
+  color: $colorWhite;
+  background-color: $colorMauve;
+}
+
+  &:active:enabled {
+  outline-color: $colorPurpleHeart;
+  background-color: $colorPurpleHeart;
+}
+
+&:disabled,
+&[disabled] {
+  color: $colorDustyGray;
+  outline-color: $colorDustyGray;
+}
+
+rotate: z 180deg;
+}
+
+.button-next {
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+  color: $colorMediumPurple;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  outline-offset: -2px;
+  outline: 2px solid $colorMediumPurple;
+  transition: all 0.3s ease-in-out;
+
+  &:hover:enabled {
+  background-color: $colorMediumPurple;
+  color: $colorWhite;
+}
+
+&:focus-visible {
+  color: $colorWhite;
+  background-color: $colorMauve;
+}
+
+  &:active:enabled {
+  outline-color: $colorPurpleHeart;
+  background-color: $colorPurpleHeart;
+}
+
+&:disabled,
+&[disabled] {
+  color: $colorDustyGray;
+  outline-color: $colorDustyGray;
+}
+}
+
+.svg-icon {
+  stroke: $colorMediumPurple;
+}

@@ -1,0 +1,85 @@
+.custom-select {
+  width: 300px;
+  width: auto;
+  position: relative;
+  padding: 19px 32px;
+  border: 2px solid $colorWildSand;
+  outline: none;
+  outline-offset: -2px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  & select {
+    display: none;
+  }
+
+  &--selected {
+    color: $colorMediumPurple;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 32px;
+      width: 7px;
+      height: 7px;
+      border: 1px solid transparent;
+      border-color: transparent $colorMediumPurple $colorMediumPurple transparent;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &.--arrow-active::after {
+      transform: rotate(45deg);
+      rotate: z 180deg;
+    }
+  }
+
+  &:hover {
+    border-color: $colorMediumPurple;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $colorMediumPurple;
+    background-color: $colorBlueChalk;
+  }
+
+  &:active {
+    border-color: $colorPurpleHeart;
+  }
+
+  &__items {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+    padding: 22px 30px;
+    background-color: $colorWhite;
+    border: 2px solid $colorWildSand;
+    border-top: none;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    & div {
+      color: $colorMineShaft;
+      padding: 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    & div:hover {
+      background-color: $colorBlueChalk;
+    }
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  & .same-as-selected {
+    background-color: $colorMauve;
+  }
+}

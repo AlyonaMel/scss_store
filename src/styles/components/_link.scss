@@ -1,0 +1,122 @@
+.link {
+  position: relative;
+  color: $colorDustyGray;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  outline-offset: 0;
+  overflow: hidden;
+  background: transparent;
+  outline-offset: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    background-color: $colorBlueChalk;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  &:before {
+    left: -10px;
+  }
+  &:after {
+    right: -10px;
+  }
+  &:hover {
+    color: $colorMediumPurple;
+  }
+  &:focus-visible:not(:active):hover {
+    color: $colorMediumPurple;
+  }
+  &:focus-visible:not(:active) {
+    color: $colorPurpleHeart;
+    background-color: $colorBlueChalk;
+  }
+  &:focus-visible:not(:active)::after, &:focus-visible:not(:active)::before {
+    opacity: 1;
+  }
+  &:active {
+    color: $colorPurpleHeart;
+  }
+
+  &-secondary {
+    color: $colorMediumPurple;
+
+    &:hover {
+      color: $colorMauve;
+    }
+
+    &:active {
+      color: $colorPurpleHeart;
+    }
+  }
+}
+
+.icon-link {
+  display: inline-block;
+  padding: 3px;
+  margin: -3px;
+  color: $colorDustyGray;
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+  overflow: hidden;
+  background: transparent;
+  outline-offset: 0;
+  transition: all 0.2s ease-in-out;
+  font-size: 0;
+  cursor: pointer;
+
+  &::before, &::after {
+    content: none;
+  }
+
+  &:hover {
+    color: $colorMediumPurple;
+  }
+
+  &:focus-visible:not(:active):hover {
+    color: $colorMediumPurple;
+  }
+
+  &:focus-visible:not(:active) {
+    color: $colorWhite;
+    background-color: $colorMauve;
+  }
+
+  &:focus-visible:not(:active)::after, &:focus-visible:not(:active)::before {
+    opacity: 1;
+  }
+
+  &:active {
+    color: $colorPurpleHeart;
+  }
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  color: $colorCrusta;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+
+  &:hover {
+    color: $colorKoromiko;
+  }
+
+  &:focus-visible:not(:active) {
+    background-color: $colorMilkPunch;
+  }
+
+  &:active {
+    color: $colorRust;
+  }
+}

@@ -1,0 +1,126 @@
+.product {
+  padding-top: 18px;
+
+  &__preview {
+    grid-area: 1/1/2/7;
+    margin-bottom: 14px;
+    width: 100%;
+
+    &-list {
+      list-style: none;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__thumbs {
+    grid-area: 2/1/3/7;
+    margin-top: -30px;
+    padding: 10px 25px;
+    width: 100%;
+    height: 81px;
+    background-color: $colorWildSand;
+
+    &-list {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-item {
+      width: auto;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+      }
+    }
+  }
+
+  &__info {
+    grid-area: 1/7/3/13;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 36px;
+  }
+  &__rating {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    align-self: flex-start;
+
+    &::after {
+      content: attr(data-rate);
+      display: block;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: fit-content;
+      font-size: 16px;
+      height: 100%;
+      color: $colorKoromiko;
+      transform: translateX(6px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: $colorMineShaft;
+  }
+
+  &__subtitle {
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 100%;
+    color: $colorDustyGray;
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 130%;
+  }
+
+  &__btn-buy {
+    margin-bottom: 15px;
+    padding: 19px 32px;
+  }
+
+  &__btn-add-to-cart {
+    margin-left: 30px;
+    font-size: 16px;
+    color: $colorMediumPurple;
+  }
+
+  &__description {
+    grid-area: 3/1/4/7;
+  }
+
+  &__drawings {
+    grid-area: 4/1/5/7;
+    align-self: flex-end;
+  }
+
+  &__preview {
+    &-list {
+      min-width: 200px;
+      height: 245px;
+    }
+
+    &-item {
+      display: block;
+      width: 100px;
+    }
+  }
+
+  &__details {
+    grid-area: 3/7/5/13;
+  }
+}

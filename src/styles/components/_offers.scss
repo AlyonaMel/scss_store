@@ -1,0 +1,43 @@
+.offers {
+  margin-bottom: 66px;
+
+  &__card {
+    flex-basis: calc((100% - 64px) * 0.2434);
+    max-width: 296px;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+
+    &-container {
+      height: 100%;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+
+    &--big {
+      flex-basis: calc((100% - 64px) * 0.5131);
+      max-width: 624px;
+    }
+
+    & .card__title {
+      max-width: 225px;
+      margin-bottom: 24px;
+    }
+
+    & .card__image-container {
+      height: 100%;
+    }
+
+    & .card__container {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.card__big {
+  padding-top: 37px;
+}
+
+.card__1 {
+  padding-top: 71px;
+}

@@ -1,0 +1,29 @@
+.banner-card {
+  &__image-container {
+    max-height: 190px;
+  }
+
+  &__content {
+    padding: 30px;
+    background-color: $colorMineShaft;
+  }
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+    color: $colorStraw;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $colorDustyGray;
+  }
+
+  &__link {
+    display: flex;
+  }
+}

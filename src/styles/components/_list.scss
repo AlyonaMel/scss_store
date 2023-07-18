@@ -1,0 +1,30 @@
+.list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 25px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  &__key {
+    margin-right: -32px;
+    overflow: hidden;
+    color: $colorDustyGray;
+
+    &::after {
+      display: inline-block;
+      width: 0;
+      line-height: 100%;
+      white-space: nowrap;
+      content: "................................" "................................" "................................" "................................" "................................";
+    }
+  }
+
+  &__value {
+    font-size: 14px;
+    color: $colorMineShaft;
+  }
+}

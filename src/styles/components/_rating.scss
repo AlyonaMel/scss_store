@@ -1,0 +1,31 @@
+.top-rate {
+  &__grid {
+    display: grid;
+    list-style: none;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-rows: 0;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  & .card__image-container {
+    margin-bottom: 18px;
+  }
+
+  &__card {
+    grid-column: span 3;
+    height: auto;
+    min-height: 100%;
+
+    &-container {
+      justify-content: stretch;
+      align-items: stretch;
+    }
+  }
+
+  &__button {
+    display: block;
+    padding: 22px 36px;
+    margin: 0 auto;
+  }
+}

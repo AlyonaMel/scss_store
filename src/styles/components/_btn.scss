@@ -1,0 +1,64 @@
+.button {
+  padding: 22px 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  color: $colorWhite;
+  border: none;
+  outline: none;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $colorMediumPurple;
+
+    &:hover {
+      background-color: $colorMauve;
+    }
+
+    &:focus-visible {
+      background-color: $colorMauve;
+      outline-color: $colorPurpleHeart;
+    }
+
+    &:active {
+      background-color: $colorPurpleHeart;
+    }
+
+    &:disabled, &[disabled] {
+      color: $colorDustyGray;
+      background-color: $colorGallery;
+    }
+  }
+
+  &-secondary {
+    padding: 19px 34px;
+    background-color: transparent;
+    color: $colorMediumPurple;
+    outline-color: $colorMediumPurple;
+
+    &:hover {
+      color: $colorWhite;
+      background-color: $colorMediumPurple;
+    }
+
+    &:focus-visible {
+      color: $colorWhite;
+      background-color: $colorMauve;
+    }
+
+    &:active {
+      outline-color: $colorPurpleHeart;
+      background-color: $colorPurpleHeart;
+    }
+
+    &:disabled, &[disabled] {
+      color: $colorDustyGray;
+      background-color: $colorGallery;
+      outline-color: transparent;
+    }
+  }
+}

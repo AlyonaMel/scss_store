@@ -1,0 +1,213 @@
+.modal-product {
+  position: fixed;
+  padding: 10px;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  cursor: pointer;
+  overflow-y: auto;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__content {
+    position: relative;
+    padding: 15px 107px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 1200px;
+    height: 684px;
+    background-color: $colorWhite;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    transition: outline 0.3s ease-in-out;
+    z-index: 21;
+
+    &:focus-visible {
+      outline-color: $colorMediumPurple;
+    }
+  }
+
+  &__preview {
+    grid-area: 1/1/2/7;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 450px;
+
+    &-list {
+      list-style: none;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__thumbs {
+    grid-area: 2/1/3/7;
+    margin-top: -30px;
+    padding: 10px 25px;
+    width: 100%;
+    height: 166px;
+    background-color: $colorWhite;
+
+    &-list {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-item {
+      width: auto;
+
+      & img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  padding: 10px;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  cursor: pointer;
+  overflow-y: auto;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__content {
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    width: 624px;
+    min-height: 421px;
+    height: max-content;
+    background-color: $colorWhite;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    transition: outline 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline-color: $colorMediumPurple;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    max-width: 500px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $colorMineShaft;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    max-width: 374px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $colorMineShaft;
+  }
+
+  &__btn {
+    margin-bottom: 12px;
+  }
+}
+
+.modal-call {
+  position: fixed;
+  padding: 10px;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  cursor: pointer;
+  overflow-y: auto;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__content {
+    position: relative;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 624px;
+    min-height: 421px;
+    height: max-content;
+    background-color: $colorWhite;
+    border-radius: 10px;
+    cursor: default;
+  }
+
+  &__close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: 3px;
+    transition: outline 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline-color: $colorMediumPurple;
+    }
+  }
+
+  &__text {
+    padding-top: 32px;
+    margin-bottom: 30px;
+    max-width: 474px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $colorMineShaft;
+  }
+}

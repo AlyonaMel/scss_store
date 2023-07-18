@@ -1,0 +1,64 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  line-height: 0;
+  background: none;
+  color: $colorWhite;
+  background-color: $colorKoromiko;
+  border-radius: 50%;
+  outline-offset: -1px;
+  outline: 1px solid $colorKoromiko;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    padding: 5px;
+    width: max-content;
+    max-width: 172px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+    bottom: 100%;
+    left: 50%;
+    background-color: $colorMineShaft;
+    color: $colorWhite;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-9px);
+    transition: all 0.3s ease;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $colorMineShaft transparent transparent transparent;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: $colorKoromiko;
+    background-color: $colorWhite;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}

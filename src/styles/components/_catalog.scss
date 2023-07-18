@@ -1,0 +1,52 @@
+aside {
+  grid-area: 1/1/2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog {
+  &__container {
+    padding-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 130%;
+
+    &2 {
+      display: none;
+    }
+  }
+
+  &__content {
+    grid-area: 1/4/2/13;
+    grid-column: span 9;
+  }
+
+  &__swiper {
+    height: auto;
+  }
+
+  &__btn-page {
+    padding: 8px 0;
+    width: 32px;
+    height: 32px;
+    align-content: center;
+
+    &1 {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+
+  &__btn-page:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__pagination {
+    grid-area: 2/4/3/13;
+    text-align: center;
+  }
+}

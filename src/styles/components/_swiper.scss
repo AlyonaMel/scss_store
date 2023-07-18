@@ -1,0 +1,20 @@
+.swiper {
+  margin: 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+
+  &-slide {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  &-controls {
+    display: flex;
+    gap: 13px;
+  }
+
+  &-pagination {
+    margin-bottom: 8px;
+  }
+}

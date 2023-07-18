@@ -1,0 +1,50 @@
+.noUi {
+  &-target {
+    background-color: $colorWildSand;
+    border: none;
+    height: 3px;
+    border-radius: 50% 0;
+  }
+
+  &-connect {
+    background-color: $colorMediumPurple;
+  }
+
+  &-handle {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &::before {
+      left: 10.5px;
+      top: 7px;
+      content: "";
+      background: none;
+      height: auto;
+      width: auto;
+      border-bottom: 13px solid $colorMediumPurple;
+      border-right: 6.5px solid transparent;
+      border-left: 6.5px solid transparent;
+      border-radius: 3px;
+      transition: border-color 0.1s ease-in-out;
+    }
+
+    &::after {
+      content: none;
+    }
+
+    &:hover::before {
+      border-bottom: 13px solid $colorMauve;
+    }
+
+    &:active:before {
+      border-bottom: 13px solid $colorPurpleHeart;
+    }
+  }
+
+  &-horisontal &-handle {
+    width: 0;
+    top: 0;
+  }
+}

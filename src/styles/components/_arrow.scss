@@ -1,0 +1,50 @@
+.arrow-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: $colorMediumPurple;
+  text-decoration: underline solid transparent 2px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-decoration: underline solid $colorMediumPurple 2px;
+
+    & .arrow {
+      color: $colorWhite;
+    }
+
+    & svg {
+      background-color: $colorMediumPurple;
+    }
+  }
+
+  &:focus-visible:not(:active) {
+    color: $colorMediumPurple;
+    text-decoration: underline solid $colorMediumPurple 2px;
+    background-color: transparent;
+
+    & .arrow {
+      color: $colorWhite;
+    }
+
+    & svg {
+      background-color: $colorMauve;
+    }
+  }
+
+  &:active {
+    text-decoration: underline solid $colorPurpleHeart 2px;
+
+    & svg {
+      background-color: $colorPurpleHeart;
+    }
+  }
+
+  & svg {
+    margin-left: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+}
